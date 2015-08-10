@@ -1,0 +1,30 @@
+<html>
+<head>
+    <!--这里的{{title}}表示title这个变量的内容由服务器端产生并填写到该位置-->
+    <title>{{title}}</title>
+<body>
+<center><h1>Welcome to UserManager</h1></center>
+<hr/>
+<center>
+    <!--表单以POST方式提交到AddUser-->
+    <form action = 'Login' method = 'post'>
+            email:<input type = 'text' name = 'uemail' />
+            pw:<input type = 'password' name = 'upw' />
+            <input type = 'submit' value = 'Submit' />
+            <input type = 'reset' value = 'Reset' />
+    </form>
+
+    <form enctype="multipart/form-data" action="/upload" method="post">
+        File: <input type="file" name="filearg" />
+        <br />
+        <br />
+        <input type="submit" value="upload" />
+    </form>
+
+<hr/>
+
+</center>
+
+<img src={{static_url("uploads/thumbnail/1.jpg")}} />
+</body>
+</html>
